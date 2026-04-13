@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>홈앤서비스 2026 AI 교육 - 사내 환경 사전 테스트 체크리스트</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.7;
+  }
+  h1 {
+    font-size: 28px;
+    border-bottom: 3px solid #ff3b2f;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .subtitle { color: #666; font-size: 14px; margin-bottom: 40px; }
+  .course {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    border-left: 5px solid #ff3b2f;
+  }
+  .course h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #ff3b2f;
+  }
+  .meta {
+    display: inline-block;
+    background: #fff3f1;
+    color: #ff3b2f;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-right: 6px;
+    font-weight: 600;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    background: #fff;
+  }
+  th, td {
+    border: 1px solid #e3e3e3;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #f7f7f7;
+    font-weight: 600;
+    color: #444;
+  }
+  td.category {
+    background: #fbfbfb;
+    font-weight: 600;
+    width: 140px;
+    color: #ff3b2f;
+  }
+  td.what { width: 260px; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  ul li { margin-bottom: 4px; }
+  .callout {
+    background: #fff9e6;
+    border-left: 4px solid #ffc107;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .callout strong { color: #b77d00; }
+  .priority-high { color: #d32f2f; font-weight: 700; }
+  .priority-mid { color: #f57c00; font-weight: 600; }
+  .priority-low { color: #689f38; font-weight: 600; }
+  .tag {
+    display: inline-block;
+    background: #eceff1;
+    color: #455a64;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-right: 4px;
+  }
+  .summary {
+    background: #e8f5e9;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .summary h3 { margin-top: 0; color: #2e7d32; }
+  .risk-box {
+    background: #ffebee;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 13px;
+  }
+  .risk-box strong { color: #c62828; }
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li::before {
+    content: "☐  ";
+    color: #ff3b2f;
+    font-weight: bold;
+  }
+  .day-section {
+    background: #f5f9ff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 12px 0 8px;
+    font-weight: 600;
+    color: #1565c0;
+  }
+  code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #d6336c;
+  }
+  .legend {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h1>홈앤서비스 2026 AI 교육 · 사내 환경 사전 테스트 체크리스트</h1>
+<div class="subtitle">
+  작성일: 2026-04-13 · 담당: 강연정 (Day1 Company LD) · 대상: Smart Work / SQL with AI / Action with AI 3개 과정
+</div>
+
+<div class="summary">
+  <h3>왜 사전 테스트가 필요한가?</h3>
+  "교육장에서는 되는데 사무실에선 안 된다"는 기술 클레임을 <strong>0%</strong>로 만들기 위한 작업이에요.
+  홈앤서비스는 ① 사내 보안정책으로 외부 AI Tool 제약 ② 내부 데이터 업로드 제한 ③ Excel 기반 업무가 특징이라,
+  교육 시작 <strong>D-14 ~ D-7</strong> 기간 안에 실제 교육용 PC/계정으로 모든 실습 플로우를 1회 리허설해야 해요.
+</div>
+
+<div class="legend">
+  우선순위 표기: <span class="priority-high">■ 높음</span> (막히면 교육 진행 불가) ·
+  <span class="priority-mid">■ 중간</span> (대체 플랜 있으면 OK) ·
+  <span class="priority-low">■ 낮음</span> (있으면 좋음)
+</div>
+
+<!-- ========================================= -->
+<!-- SMART WORK -->
+<!-- ========================================= -->
+<div class="course">
+  <h2>① Smart Work 과정 (1일, 7H)</h2>
+  <span class="meta">자동화 Tool 3H</span>
+  <span class="meta">VBA 4H</span>
+  <span class="meta">초급-중급</span>
+  <span class="meta">이론 30% / 실습 70%</span>
+
+  <p><strong>과정 재구성 요지:</strong>
+  사내 AI Tool 제약 + 내부 데이터 업로드 제한 + Excel 업무 중심 환경을 고려해,
+  <u>자동화 Tool 이해(n8n / Make / Dify) 3H</u> + <u>VBA 이해 & ChatGPT 활용 구현 4H</u>로 구성.
+  VBA 코딩을 가르치는 게 아니라 "ChatGPT로 자동화 설계 → 사내 환경에 맞게 구현"하는 흐름.</p>
+
+  <h3>파트 1. 자동화 Tool 이해/실습 (3H) — n8n / Make / Dify</h3>
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">웹 접근성</td>
+      <td class="what">n8n.io, make.com, dify.ai 사내망 접속 가능 여부</td>
+      <td>
+        교육용 PC에서 Chrome/Edge로 3개 사이트 접속 → 회원가입 페이지까지 진입 확인.
+        <br><span class="tag">차단 시</span> IT팀에 방화벽 예외 신청 (IP/도메인 화이트리스트)
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">계정 생성</td>
+      <td class="what">외부 이메일 기반 가입 허용 여부 / 회사 이메일 사용 가능 여부</td>
+      <td>
+        테스트 계정 1개를 사내 Gmail/회사 이메일로 생성 시도.
+        <br>무료 플랜 한도 확인 (n8n Free: 월 5,000 실행 / Make Free: 월 1,000 operation)
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">트리거 연동</td>
+      <td class="what">Gmail, Outlook, MS Teams, Google Sheets 커넥터 OAuth 인증 통과</td>
+      <td>
+        n8n/Make에서 Gmail → Sheets 샘플 워크플로 1개 만들어 실제 인증까지 통과.
+        <br>사내 Outlook 계정은 Microsoft Graph API 승인 필요 여부 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">OpenAI 노드</td>
+      <td class="what">AI 노드(ChatGPT/Claude) API Key 발급 & 사용 가능 여부</td>
+      <td>
+        교육용 OpenAI API 키 1개 발급 → Make의 OpenAI 모듈로 "Hello World" 응답 호출.
+        <br>결제 카드 등록·월 사용량 한도 설정 (교육 1회당 약 $10 기준).
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">더미데이터</td>
+      <td class="what">실습용 더미 VOC/AS접수/거래처 데이터셋 준비</td>
+      <td>
+        홈앤서비스 실제 데이터 구조(컬럼명·타입) 참고해 비식별 더미 100~300행 제작.
+        <br>Excel/CSV 포맷으로 준비, 교육장 공용 드라이브에 사전 업로드.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">Dify 특화</td>
+      <td class="what">Dify Cloud 접속 가능 여부 / On-premise 설치 필요성</td>
+      <td>
+        Dify Cloud가 차단되면 로컬 설치(Docker) 가능한지 교육장 PC 환경 확인.
+        <br>Docker Desktop 설치 권한 여부 사전 체크.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">자동 실행</td>
+      <td class="what">스케줄 트리거(Cron) 작동 확인</td>
+      <td>
+        "매 5분마다 실행" 테스트 워크플로로 30분간 자동 실행 로그 확인.
+      </td>
+      <td><span class="priority-low">낮음</span></td>
+    </tr>
+  </table>
+
+  <h3>파트 2. VBA 이해/실습 (4H) — ChatGPT 활용 설계 중심</h3>
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">매크로 활성화</td>
+      <td class="what">사내 PC Excel에서 VBA/매크로 실행 가능 여부</td>
+      <td>
+        Excel → 옵션 → 보안센터 → 매크로 설정 확인. <br>
+        "모든 매크로 제외" 정책이면 IT팀에 교육용 PC 예외 요청.
+        <br>xlsm 파일 저장 가능 여부도 체크 (일부 환경은 차단).
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">개발 도구</td>
+      <td class="what">VBA 편집기(Alt+F11) 접근 가능 여부</td>
+      <td>
+        Excel 리본 "개발 도구" 탭 노출 → Visual Basic Editor 실행 → 표준 모듈 1개 생성 테스트.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">신뢰할 수 있는 위치</td>
+      <td class="what">실습 파일 저장 경로가 매크로 실행 허용 위치인지</td>
+      <td>
+        C:\Users\...\Documents 같은 표준 경로에 xlsm 저장 후 매크로 실행 테스트.
+        <br>사내 공유 드라이브·원드라이브 경로에서는 실행 차단될 수 있어 로컬 경로 확보.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">실전 시나리오 4종</td>
+      <td class="what">
+        교육에서 다룰 4가지 자동화 시나리오 실제 작동 확인:
+        <ul>
+          <li>여러 시트 통합</li>
+          <li>데이터 자동 정리(빈칸/형식)</li>
+          <li>중복 제거 및 요약</li>
+          <li>버튼 기반 보고서 정리</li>
+        </ul>
+      </td>
+      <td>
+        각 시나리오별 더미 xlsx 준비 → ChatGPT에 "이 구조로 ~~해줘" 프롬프트 → 받은 VBA 코드 붙여넣기 → 실행 → 정상 동작까지.
+        <br>사내 Excel 버전(2016/2019/365) 호환성 확인 — <code>Power Query</code>, <code>Dynamic Array</code> 함수 사용 가능 여부.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">ChatGPT 접근</td>
+      <td class="what">사내망에서 ChatGPT 웹 접속 / API 사용 가능 여부</td>
+      <td>
+        chat.openai.com 접속 → 로그인 → 샘플 질문 응답 확인.
+        <br>차단 시: Copilot(MS 365), 사내 승인 LLM 대체 검토.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">ActiveX 컨트롤</td>
+      <td class="what">Excel 시트에 버튼/양식 컨트롤 삽입·매크로 연결</td>
+      <td>
+        개발도구 → 삽입 → 버튼 → 매크로 할당 → 클릭 시 실행 테스트.
+        <br>"버튼 기반 보고서 정리" 실습의 필수 요소.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">참조 라이브러리</td>
+      <td class="what">
+        Scripting.Dictionary, FileSystemObject, ADO 등 기본 참조 사용 가능
+      </td>
+      <td>
+        VBE → 도구 → 참조 → Microsoft Scripting Runtime 체크 가능 확인.
+        <br>중복제거/시트통합 실습에 자주 쓰임.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">참여자 데이터 적용</td>
+      <td class="what">참여자 본인 업무 데이터 → 실습 포맷 적용 흐름</td>
+      <td>
+        사전과제: 참여자에게 "본인이 반복 사용하는 Excel 파일 1개" 지참 안내.
+        <br>개인정보/민감정보 비식별 가이드 사전 공유.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>핵심 리스크:</strong> VBA 매크로가 그룹 정책으로 막혀있을 가능성이 가장 큼.
+    D-14 시점에 IT팀과 <u>교육용 PC 10~30대 대상 매크로 활성화 예외 신청</u> 공문 필요.
+    못 막을 거면 Power Automate Desktop 대체 시나리오도 Plan B로 준비.
+  </div>
+</div>
+
+<!-- ========================================= -->
+<!-- SQL with AI -->
+<!-- ========================================= -->
+<div class="course">
+  <h2>② SQL with AI 과정 (1일, 7H)</h2>
+  <span class="meta">데이터 추출→가공→시각화→공유 E2E</span>
+  <span class="meta">초급-중급</span>
+  <span class="meta">이론 30% / 실습 70%</span>
+
+  <p><strong>흐름:</strong> AI 기반 데이터 업무 진단(0.5H) → AI 쿼리 생성(2H) → Power Query 가공(1.5H) → 시각화(0.5H) → 보고서 공유(1H) → 업무 적용 설계(1.5H)</p>
+
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">MS SQL 접속</td>
+      <td class="what">교육용 MS SQL Server 접속 / 읽기 권한 확보</td>
+      <td>
+        SSMS(SQL Server Management Studio) 또는 Azure Data Studio 설치 확인.
+        <br>교육용 별도 DB(실서비스 분리) 구축 → 비식별 샘플 테이블(AS접수/고객/상품 등) 적재.
+        <br>읽기 전용 계정 발급 → SELECT 쿼리 실행 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">샘플 데이터</td>
+      <td class="what">현업 구조 반영 비식별 샘플 DB 준비</td>
+      <td>
+        홈앤서비스 실제 테이블 스키마 3~5개 복제 → 익명화된 더미 10,000~100,000행 INSERT.
+        <br>JOIN / GROUP BY / 날짜 조회 등 실습에 필요한 필드 구성 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Power Query 연결</td>
+      <td class="what">Excel → Power Query → MS SQL 직접 연결 가능 여부</td>
+      <td>
+        Excel 데이터 탭 → 데이터 가져오기 → SQL Server → 서버/DB 입력 → 인증 → 테이블 로드 성공까지.
+        <br>사내 네트워크에서 DB 포트(보통 1433) 열려있는지 IT팀 확인.
+        <br>"새로 고침" 자동화 스케줄 구동 여부도 체크.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">AI 쿼리 생성</td>
+      <td class="what">ChatGPT/Copilot에게 자연어→SQL 변환 요청 결과 품질</td>
+      <td>
+        "이번 달 지역별 AS 건수 TOP10" 같은 샘플 요청 10개 → 생성된 쿼리 실제 DB에서 실행 → 정답률 확인.
+        <br>실패 패턴(테이블명 허위 생성 등) 사전 파악 → 강의 중 다룰 "검증 체크리스트" 업데이트.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">쿼리 라이브러리</td>
+      <td class="what">사내 공유용 쿼리 저장소(Notion/Confluence/SharePoint) 접근</td>
+      <td>
+        학습자가 만든 쿼리 저장·재사용 공간 1곳 선정 → 권한 확인 → 템플릿 페이지 준비.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">시각화</td>
+      <td class="what">Excel 동적 차트 / Power Query 연동 차트 작동</td>
+      <td>
+        SQL→Excel 쿼리 새로고침 시 차트 자동 갱신되는지 확인.
+        <br>조건부 서식·슬라이서·피벗 차트 사용 제한 없는지 체크.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">AI 보고서 초안</td>
+      <td class="what">보고서 데이터 → AI에게 요약 요청 → 이메일 초안 생성 흐름</td>
+      <td>
+        사내 허용 AI 도구(ChatGPT/Copilot/Gemini 중)로 샘플 수치 붙여넣기 → 요약·이메일 초안 결과물 품질 확인.
+        <br>데이터 업로드 제한이 있다면 "수치만 복사 붙여넣기" 워크플로 확정.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">메일 발송</td>
+      <td class="what">Outlook에서 초안 붙여넣기 → 발송 정상 동작</td>
+      <td>
+        사내 메일 서버로 실제 발송 테스트 (수신자: 테스트 계정 1개).
+        <br>첨부파일(xlsx) 사이즈 제한 확인.
+      </td>
+      <td><span class="priority-low">낮음</span></td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>핵심 리스크:</strong> Power Query → MS SQL 직접 연결이 네트워크 정책으로 막히는 사례 多.
+    막히면 <u>사전 추출된 CSV/xlsx 기반 실습</u>으로 Plan B 전환. 단, "E2E 리드타임 단축" 메시지가 약해지니 최대한 직결 확보.
+  </div>
+</div>
+
+<!-- ========================================= -->
+<!-- Action with AI -->
+<!-- ========================================= -->
+<div class="course">
+  <h2>③ Action with AI 과정 (3일, 24H)</h2>
+  <span class="meta">Track1: AI Automation & Agent Builder</span>
+  <span class="meta">Track2: AI Data Analytics</span>
+  <span class="meta">중급</span>
+  <span class="meta">이론 20% / 실습 80%</span>
+
+  <p><strong>흐름:</strong> Day1 공통(툴 데모+과제 정의+트랙 배정) → Day2~3 트랙별 심화 → 이후 2개월 멘토링·코칭</p>
+
+  <div class="day-section">Day 1 공통 — 툴 데모 & 과제 정의</div>
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">Make/n8n</td>
+      <td class="what">Outlook → Excel → Teams 자동 흐름 샘플 구동</td>
+      <td>
+        3개 서비스 모두 사내 계정 OAuth 연동 가능 여부 확인.
+        <br>Teams 봇 메시지 발송 권한(Incoming Webhook) IT팀 승인 사전 확보.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Cursor</td>
+      <td class="what">Cursor IDE 사내 설치·실행 가능 여부</td>
+      <td>
+        교육용 PC에 Cursor 설치 권한 확인 (관리자 권한 필요).
+        <br>Cursor → OpenAI/Anthropic API 호출 차단 여부 네트워크 점검.
+        <br>Cursor Pro 유료 계정 단체 발급 경로 확보.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Claude / ChatGPT</td>
+      <td class="what">사내망에서 Claude, ChatGPT 웹 동시 접속 가능 여부</td>
+      <td>
+        claude.ai, chat.openai.com 둘 다 접속 테스트.
+        <br>둘 중 1개만 허용되면 강의 동선 사전 조정.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Python 실행환경</td>
+      <td class="what">Python 3.10+ 설치, pip 사용 가능</td>
+      <td>
+        python --version, pip install pandas/openpyxl/requests 성공 확인.
+        <br>사내 프록시 환경이면 pip config 가이드 사전 제작.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+  </table>
+
+  <div class="day-section">Day 2~3 Track 1 — AI Automation & Agent Builder</div>
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">n8n 고급</td>
+      <td class="what">라우터/필터/Error Handler 복잡 워크플로 작동</td>
+      <td>
+        "AS 접수 메일 → 유형별 라우팅 → Excel 저장" 전 플로우 구현 리허설.
+        <br>실패 케이스(이메일 파싱 오류 등) 에러 핸들러 발화 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Cursor + Python</td>
+      <td class="what">Cursor에서 "Outlook 파싱 스크립트" 생성 → 실행</td>
+      <td>
+        Outlook COM 자동화(pywin32) 사내 정책 확인.
+        <br>차단 시: IMAP/Graph API 대체 경로 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">Claude API</td>
+      <td class="what">Claude API 키 발급·호출 성공</td>
+      <td>
+        anthropic.com 회원가입 → API 키 발급 → curl 또는 Python 샘플 호출 성공까지.
+        <br>교육용 크레딧 $50~100 선충전.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">AI Agent / RAG</td>
+      <td class="what">내부 매뉴얼 기반 RAG Agent 구현 환경</td>
+      <td>
+        Dify 또는 n8n AI 노드 + 벡터DB 구성 리허설.
+        <br>사내 매뉴얼 PDF 업로드 실습 시 민감정보 가이드 사전 정의.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">SharePoint → Word/PPT</td>
+      <td class="what">SharePoint 파일 자동 접근 + Word/PPT 자동 생성</td>
+      <td>
+        Graph API 또는 python-docx/python-pptx로 로컬 생성 후 SharePoint 업로드까지.
+        <br>권한이 필요한 사이트는 별도 교육용 SharePoint 폴더 프로비저닝.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">스케줄 실행</td>
+      <td class="what">n8n/Make 스케줄 트리거 실서비스 환경 구동</td>
+      <td>
+        "매일 오전 9시 자동 실행" 1회 설정 후 24시간 내 실제 발화 확인.
+      </td>
+      <td><span class="priority-low">낮음</span></td>
+    </tr>
+  </table>
+
+  <div class="day-section">Day 2~3 Track 2 — AI Data Analytics</div>
+  <table>
+    <tr>
+      <th style="width:140px;">카테고리</th>
+      <th style="width:260px;">무엇을 테스트?</th>
+      <th>어떻게 테스트?</th>
+      <th style="width:80px;">우선순위</th>
+    </tr>
+    <tr>
+      <td class="category">Cursor × pandas</td>
+      <td class="what">자연어→pandas 코드 자동 생성 → 실행</td>
+      <td>
+        "고장현황.xlsx 월별·지역별 집계" 샘플 요청 → 코드 생성 → Jupyter/Python 실행 성공.
+        <br>pandas, openpyxl, matplotlib, seaborn 모두 pip install 성공 확인.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">샘플 xlsx</td>
+      <td class="what">실습용 "고장현황.xlsx" 등 비식별 데이터 준비</td>
+      <td>
+        실제 운영 데이터 구조 반영한 더미 10,000행 이상 생성.
+        <br>결측값·중복·이상치 일부러 포함시켜 실습 풍부화.
+      </td>
+      <td><span class="priority-high">높음</span></td>
+    </tr>
+    <tr>
+      <td class="category">시각화 출력</td>
+      <td class="what">matplotlib/seaborn 차트 저장 & 한글 폰트</td>
+      <td>
+        한글 폰트 설정(NanumGothic/AppleGothic) 미적용 시 깨짐 현상 확인.
+        <br>교육용 PC에 폰트 일괄 설치 스크립트 준비.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">OpenAI API 배치</td>
+      <td class="what">VOC 텍스트 대량 배치 처리 (토큰·속도 한도 확인)</td>
+      <td>
+        더미 VOC 1,000건 → 분류·요약 배치 실행 → 소요시간·비용 측정.
+        <br>Tier 1 한도(분당 요청 수) 초과 대응 코드 준비.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">Word/Excel 보고서</td>
+      <td class="what">python-docx / openpyxl 자동 생성 → 서식 유지</td>
+      <td>
+        샘플 분석결과 → Word 보고서 자동 저장 → 사내 템플릿 서식 적용 테스트.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">Outlook 자동 발송</td>
+      <td class="what">win32com으로 Outlook 자동 메일 발송</td>
+      <td>
+        로컬 Outlook 실행 상태에서 Python 스크립트로 메일 발송 성공까지.
+        <br>차단 시: SMTP 직접 연결 or Graph API 대체.
+      </td>
+      <td><span class="priority-mid">중간</span></td>
+    </tr>
+    <tr>
+      <td class="category">Plotly 대시보드</td>
+      <td class="what">Plotly 인터랙티브 대시보드 사내 브라우저 렌더링</td>
+      <td>
+        Plotly 생성 HTML 파일 사내 PC에서 Chrome/Edge 렌더링 확인.
+        <br>CDN 차단 여부 체크 → 오프라인 모드 빌드 옵션 사전 설정.
+      </td>
+      <td><span class="priority-low">낮음</span></td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <strong>핵심 리스크:</strong>
+    ① Cursor·Claude·OpenAI 모두 사내망에서 접속 가능해야 함 → D-14 네트워크팀 일괄 예외 요청.
+    ② pywin32 기반 Outlook 자동화는 그룹 정책 영향 큼 → Graph API 대체 시나리오 사전 준비.
+    ③ 2개월 멘토링 기간 중 학습자가 회사 PC에서 동일 환경 재현 가능해야 자산화 의미 있음.
+  </div>
+</div>
+
+<!-- ========================================= -->
+<!-- 공통 준비사항 -->
+<!-- ========================================= -->
+<div class="course" style="border-left-color:#1976d2;">
+  <h2>공통 사전 준비 체크리스트</h2>
+  <p>3개 과정 공통으로 D-14 ~ D-7 사이 확보되어야 하는 항목이에요.</p>
+
+  <ul class="checklist">
+    <li><strong>교육용 PC 표준 이미지 확정:</strong> OS·Office·브라우저·Python·Cursor·SSMS 설치 버전 스펙 문서화 및 최소 1대 리허설</li>
+    <li><strong>네트워크 방화벽 예외 신청:</strong> n8n.io / make.com / dify.ai / claude.ai / chat.openai.com / anthropic.com / cursor.com / api.openai.com 일괄 IT팀 공문 발송</li>
+    <li><strong>교육용 계정 사전 발급:</strong> OpenAI·Anthropic·Cursor·n8n·Make 각각 교육생 수만큼 + 예비분 발급, 로그인 정보 시트 관리</li>
+    <li><strong>교육용 DB/데이터셋 구축:</strong> 실서비스 분리 별도 인스턴스 + 비식별 샘플 데이터(VOC/AS/고객/거래) 탑재</li>
+    <li><strong>보안 서약서·개인정보 가이드:</strong> 교육생 1일차 배포용 서약서 템플릿 + 데이터 업로드 금지 가이드 1페이지</li>
+    <li><strong>Plan B 시나리오 문서화:</strong> 차단되는 도구·경로별 대체 방안(예: ChatGPT→Copilot, pywin32→Graph API) 운영진 공유</li>
+    <li><strong>Daily Wrap-up 템플릿:</strong> 강사-운영-홈앤서비스 3자 회고 시트 양식 사전 공유</li>
+    <li><strong>실습코치 사전 OT:</strong> 도구 3~4종 실제 구동 가능한 코치 사전 매칭 + 환경 리허설</li>
+    <li><strong>교육 전 참여자 사전과제:</strong> Smart Work는 본인 Excel 1개 지참 / Action with AI는 해결하고 싶은 업무 문제 1개 사전 제출</li>
+  </ul>
+
+  <div class="risk-box">
+    <strong>가장 막힐 가능성 큰 3개:</strong><br>
+    1. VBA 매크로 그룹 정책 차단 (Smart Work) — D-14 IT팀 공문<br>
+    2. Power Query → MS SQL 직결 네트워크 차단 (SQL with AI) — 교육용 DB 포트 오픈 요청<br>
+    3. Cursor + 외부 LLM API 네트워크 차단 (Action with AI) — 도메인 화이트리스트 일괄 신청<br>
+    이 3개는 막히면 과정 메시지 자체가 약해지니 최우선으로 확보 필요.
+  </div>
+</div>
+
+<p style="text-align:center; color:#999; font-size:12px; margin-top:40px;">
+  © 2026 Fast Campus Corporate Education · 홈앤서비스 AI 교육 운영 내부용
+</p>
+
+</body>
+</html>
